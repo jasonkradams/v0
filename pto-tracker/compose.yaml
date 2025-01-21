@@ -1,0 +1,11 @@
+services:
+  pto-tracker:
+    container_name: pto-tracker
+    image: jasonkradams/pto-tracker:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./pto_tracker.db:/app/pto_tracker.db
